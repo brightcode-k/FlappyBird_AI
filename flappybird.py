@@ -3,7 +3,6 @@ import random
 import os
 import time
 import neat
-#import visualize
 #import pickle
 pygame.font.init()
 
@@ -209,7 +208,7 @@ def main(genomes, config):
     birds = []
     ge = []
     for genome_id, genome in genomes:
-        genome.fitness = 0  # start with fitness level of 0
+        genome.fitness = 0
         net = neat.nn.FeedForwardNetwork.create(genome, config)
         nets.append(net)
         birds.append(Bird(230,350))
